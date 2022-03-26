@@ -2,8 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: cursive, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -13,4 +12,144 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/* logger-container style */
+.logger-container {
+  padding: 24px;
+}
+
+/* Buttons style */
+.sort-button {
+  background-color: lightskyblue;
+  color: blue;
+  border: none;
+  line-height: 1;
+  margin: 0 5px;
+  padding: 2px;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+  border-radius: 100%;
+  transition: transform 0.2s ease-out;
+}
+
+.sort-reverse {
+  transform: rotate(180deg);
+}
+
+/* Table style */
+.styled-table thead tr {
+  background-color: #fff;
+  color: #000;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.styled-table td {
+  font-size: 12px;
+}
+
+.styled-table {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  min-width: 400px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin: 16px 0;
+}
+
+/* Pagination style */
+.pagination {
+  background-color: aliceblue;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 100%;
+  margin: 0;
+}
+
+.page-item {
+  width: 30px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.page-item.active {
+  background-color: #ddd;
+}
+
+/* Input style */
+input,
+select {
+  background-color: #fff;
+  width: 250px;
+  padding: 8px;
+  margin: 8px 0;
+  border: 0;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  transition: 0.3s box-shadow;
+}
+input:hover {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* filter-container style */
+.filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .filter-container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .logger-container {
+    padding: 8px;
+  }
+
+  input,
+  select {
+    width: 100%;
+  }
+}
+
+/* submit-button style */
+.submit-button {
+  width: 250px;
+  height: 40px;
+  color: #fff;
+  background-color: darkblue;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  transition: 0.3s box-shadow;
+}
+
+.submit-button:hover {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
 }
