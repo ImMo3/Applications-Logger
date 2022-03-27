@@ -68,6 +68,11 @@ const Table = ({ headers, slicedData, changedUsers, users }: { headers: any[], s
                         ))}
                     </tbody>
                 </table>
+                {slicedData.length === 0 &&
+                    <h5 style={{ textAlign: 'center' }}>
+                        There is no data to display
+                    </h5>
+                }
                 <Pagination usersPerPage={usersPerPage} totalUsers={changedUsers.length} currentPage={currentPage} paginate={paginate} />
             </div>
         </div>
