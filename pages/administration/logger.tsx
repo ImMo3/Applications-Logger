@@ -27,16 +27,12 @@ const Logger: NextPage<{
 export const getStaticProps: GetStaticProps = async (context) => {
     const res = await fetch("https://run.mocky.io/v3/a2fbc23e-069e-4ba5-954c-cd910986f40f");
     const users: GetUsersResults = await res.json();
-    const actionTypes = Object.values(ActionType);
-    const applicationTypes = Object.values(ApplicationType);
 
     return {
         props: {
             users: users.result.auditLog,
             changedUsers: users.result.auditLog,
             slicedData: users.result.auditLog,
-            actionTypes: actionTypes,
-            applicationTypes: applicationTypes,
             headers: [
                 { key: 'logId', lable: 'Log ID' },
                 { key: 'applicationType', lable: 'Application Type' },

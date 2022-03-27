@@ -58,7 +58,7 @@ class TableFilters extends React.Component<{ onClick: MouseEventHandler<any>, ro
 
                 <div>
                     <label htmlFor="actionType">Action Type</label>
-                    <select value={this.state.filterValues.actionType} name="actionType" onChange={(e) => this.applyFilter(e, 'actionType')} >
+                    <select className='actionTypes-list' value={this.state.filterValues.actionType} name="actionType" onChange={(e) => this.applyFilter(e, 'actionType')} >
                         <option key={'empty_null'} value={''}></option>
                         {this.actionTypes.map(action => (
                             <option key={action} value={action}>{action}</option>
@@ -67,7 +67,7 @@ class TableFilters extends React.Component<{ onClick: MouseEventHandler<any>, ro
                 </div>
                 <div>
                     <label htmlFor="applicationType">Application Type</label>
-                    <select value={this.state.filterValues.applicationType} name="applicationType" onChange={(e) => this.applyFilter(e, 'applicationType')} >
+                    <select className='applicationTypes-list' value={this.state.filterValues.applicationType} name="applicationType" onChange={(e) => this.applyFilter(e, 'applicationType')} >
                         <option key={'empty_null'} value={''}></option>
                         {this.applicationTypes.map(type => (
                             <option key={type} value={type}>{type}</option>
